@@ -1,0 +1,34 @@
+/* Navigation for Larger Screens */
+@media (min-width: 32rem) {
+    #hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Gallery Layout for Larger Screens */
+@media (min-width: 48rem) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 64rem) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
