@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore a collection of beautiful temples from around the world in this temple album.">
+    <meta name="author" content="N'dihoulou Jeansty Varel">
+    <title>Place - Country Place</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place.css" media="(min-width: 32rem)">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Republic of Congo</h1>
+    </header>
+    <section class="hero">
+        <picture>
+            <source srcset="images/hero-small.jpg" media="(min-width: 668px)">
+            <img src="images/hero-large.jpg" alt="Congo - Gorilla">
+        </picture>
+    </section>
+    <section class="info-container">
+        <div class="info-box data-box">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 342.000 km2</li>
+                <li><strong>Population:</strong> 5,400,000</li>
+                <li><strong>Capital:</strong> Antananarivo</li>
+                <li><strong>Languages:</strong> Lingala, Kikongo, French</li>
+                <li><strong>Currency:</strong> Franc CFA</li>
+                <li><strong>Time Zone:</strong> UTC+1</li>
+                <li><strong>Calling Code:</strong> +242</li>
+                <li><strong>Internet TLD:</strong> speed</li>
+            </ul>
+        </div>
+
+        <div class="info-box weather-box">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <p><strong>Temperature:</strong> <span id="temp">10</span>°C</p>
+            <p><strong>Conditions:</strong> Partly Cloudy</p>
+            <p><strong>Wind:</strong> <span id="wind-speed">5</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> N'dihoulou Jeansty Varel - Congo </p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+</html>
