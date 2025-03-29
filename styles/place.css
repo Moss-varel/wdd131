@@ -88,3 +88,11 @@ footer::after {
     color: white;
     margin-top: 5px;
 }
+
+.svg-inline--fa .fa-primary {
+    fill: currentColor;  /* Fix for primary color */
+}
+
+.svg-inline--fa .fa-secondary {
+    fill: currentColor;  /* Fix for secondary color */
+}
