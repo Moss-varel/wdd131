@@ -99,6 +99,7 @@ footer {
     --fa-secondary-opacity: 1;
 }
 
+/* Set colors correctly for primary and secondary parts */
 .svg-inline--fa .fa-primary {
     color: var(--fa-primary-color, currentColor);
 }
@@ -107,6 +108,7 @@ footer {
     color: var(--fa-secondary-color, currentColor);
 }
 
+/* Fix mask issues */
 .svg-inline--fa mask .fa-primary,
 .svg-inline--fa mask .fa-secondary {
     color: black;
