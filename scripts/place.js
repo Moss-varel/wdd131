@@ -7,16 +7,24 @@ document.addEventListener("DOMContentLoaded", function() {
     function calculateWindChill(temp, windSpeed) {
         if (temp <= 10 && windSpeed > 4.8) {
             return (
-                13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 
+                13.12 + 
+                0.6215 * temp - 
+                11.37 * Math.pow(windSpeed, 0.16) + 
                 0.3965 * temp * Math.pow(windSpeed, 0.16)
-            ).toFixed(1) + " °C";
+                .toFixed(1) + " °C";
         } else {
             return "N/A";
         }
     }
 
-    // Apply wind chill calculation
-    const temp = parseFloat(document.getElementById("temp").textContent);
-    const windSpeed = parseFloat(document.getElementById("wind-speed").textContent);
-    document.getElementById("wind-chill").textContent = calculateWindChill(temp, windSpeed);
+    // Apply wind chill calculation if elements exist
+    const tempElement = document.getElementById("temp");
+    const windSpeedElement = document.getElementById("wind-speed");
+    const windChillElement = document.getElementById("wind-chill");
+
+    if (tempElement && windSpeedElement && windChillElement) {
+        const temp = parseFloat(tempElement.textContent);
+        const windSpeed = parseFloat(windSpeedElement.textContent);
+        windChillElement.textContent = calculateWindChill(temp, windSpeed);
+    }
 });

@@ -1,58 +1,42 @@
 :root {
-    --primary-color: #c4151c;  /* Red */
+    --primary-color: #c4151c; /* Red */
     --secondary-color: #1d6a16; /* Green */
     --text-color: #333;
     --background-light: rgba(255, 255, 255, 0.8);
 }
 
-/* Default (Mobile First) */
+/* Base (Mobile) Styles */
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
 }
-
-/* Larger Screens */
-@media (min-width: 768px) {
-    body {
-        font-size: 18px;
-    }
 
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 20px;
-    font-size: 24px;
+    padding: 15px;
+    text-align: center;
 }
 
 .hero img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .info-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    gap: 20px;
-    flex-direction: column;
+    padding: 15px;
 }
 
 .info-box {
     background: var(--background-light);
     padding: 15px;
     border-radius: 8px;
-    width: 90%;
     margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.data-box {
-    text-align: left;
-    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .data-box ul {
@@ -61,38 +45,59 @@ header {
 }
 
 .data-box li {
-    margin: 5px 0;
-}
-
-.weather-box {
-    text-align: left;
-    padding: 20px;
-}
-
-.weather-icon {
-    font-size: 24px;
+    margin: 8px 0;
 }
 
 footer {
     background-color: var(--primary-color);
     color: white;
     padding: 15px;
+    text-align: center;
     margin-top: 20px;
 }
 
-footer::after {
-    content: " Example Page in a Wider View";
-    display: block;
-    font-size: 12px;
-    text-align: center;
-    color: white;
-    margin-top: 5px;
+/* Larger Screens */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 20px;
+        font-size: 24px;
+    }
+
+    .info-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 20px;
+        flex-direction: row;
+    }
+
+    .info-box {
+        width: 45%;
+        margin-bottom: 0;
+    }
+
+    footer::after {
+        content: " Example Page in a Wider View";
+        display: block;
+        font-size: 12px;
+        text-align: center;
+        color: white;
+        margin-top: 5px;
+    }
 }
 
 .svg-inline--fa .fa-primary {
-    fill: currentColor;  /* Fix for primary color */
+    fill: currentColor;
 }
 
 .svg-inline--fa .fa-secondary {
-    fill: currentColor;  /* Fix for secondary color */
+    fill: currentColor;
 }
