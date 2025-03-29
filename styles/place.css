@@ -28,19 +28,21 @@ header {
 .info-container {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
     gap: 20px;
+    flex-direction: column;
 }
 
 .info-box {
     background: var(--background-light);
     padding: 15px;
     border-radius: 8px;
-    width: 40%;
+    width: 90%;
+    margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -72,4 +74,13 @@ footer {
     color: white;
     padding: 15px;
     margin-top: 20px;
+}
+
+footer::after {
+    content: " Example Page in a Wider View";
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    margin-top: 5px;
 }
