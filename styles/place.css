@@ -94,10 +94,20 @@ footer {
     }
 }
 
+.svg-inline--fa {
+    --fa-primary-opacity: 1;
+    --fa-secondary-opacity: 1;
+}
+
 .svg-inline--fa .fa-primary {
-    fill: currentColor;
+    color: var(--fa-primary-color, currentColor);
 }
 
 .svg-inline--fa .fa-secondary {
-    fill: currentColor;
+    color: var(--fa-secondary-color, currentColor);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+    color: black;
 }
